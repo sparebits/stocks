@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { SharesComponent } from './shares/shares.component';
+import { InstrumentListComponent } from './component/instrument-list/instrument-list.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        SharesComponent
+        SharesComponent,
+        InstrumentListComponent
     ],
     imports: [
         BrowserModule
