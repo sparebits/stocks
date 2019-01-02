@@ -13,7 +13,7 @@ import { Instrument } from '../../model/instrument';
 })
 export class InstrumentListComponent implements OnInit {
 
-    private instruments: Array<Instrument>;
+    public instruments: Array<Instrument>;
 
     constructor(private instrumentService: InstrumentService) { }
 

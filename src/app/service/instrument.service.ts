@@ -11,7 +11,8 @@ import { Instrument } from '../model/instrument';
 export class InstrumentService {
 
     private instruments: Array<Instrument> = [
-        new Instrument('Сирма Груп Холдинг АД', 'SKK')
+        new Instrument('Сирма Груп Холдинг АД', 'SKK'),
+        new Instrument('Стара Планина холд АД', '5SR')
     ];
 
     constructor() { }
