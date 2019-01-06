@@ -21,4 +21,12 @@ export class InstrumentListComponent implements OnInit {
         this.instruments = this.instrumentService.getInstruments();
     }
 
+    edit(instrument) {
+        instrument.edit = true;
+    }
+
+    cancel(instrument) {
+        instrument.edit = false;
+    }
+
 }

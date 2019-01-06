@@ -1,3 +1,13 @@
 <div *ngFor="let instrument of instruments">
-    <div>{{instrument.name}}</div>
+
+    <section *ngIf="!instrument.edit">
+        <div>{{instrument.name}}</div>
+        <button (click)="edit(instrument)">edit</button>
+    </section>
+
+    <section *ngIf="instrument.edit">
+        <input value="instrument.name" >
+        <button (click)="cancel(instrument)">cancel</button>
+    </section>
+
 </div>
