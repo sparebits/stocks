@@ -22,11 +22,17 @@ export class InstrumentListComponent implements OnInit {
     }
 
     edit(instrument) {
-        instrument.edit = true;
+    }
+
+    delete(instrument) {
+        // FIXME dialog to confirm deleteion here!
+        // FIXME call service for removing into back end
+        this.instruments = this.instruments.filter(i => i !== instrument);
     }
 
     cancel(instrument) {
-        instrument.edit = false;
     }
+
+    add() {}
 
 }

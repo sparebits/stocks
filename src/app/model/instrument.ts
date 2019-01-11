@@ -5,11 +5,9 @@
 export class Instrument {
     public name: string;
     public code: string;
-    public edit: boolean;
 
     constructor(name: string, code: string) {
         this.name = name;
         this.code = code;
-        this.edit = false;
     }
 }

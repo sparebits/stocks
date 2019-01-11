@@ -1,13 +1,23 @@
-<div *ngFor="let instrument of instruments">
+<div class="col-md-6 instrument-container">
+    <h2 style="margin: auto">Instrument Details</h2>
+    <button class="btn btn-danger" style="width:100px" (click)="add()">Add Instrument</button>
 
-    <section *ngIf="!instrument.edit">
-        <div>{{instrument.name}}</div>
-        <button (click)="edit(instrument)">edit</button>
-    </section>
-
-    <section *ngIf="instrument.edit">
-        <input value="instrument.name" >
-        <button (click)="cancel(instrument)">cancel</button>
-    </section>
-
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="hidden">Id</th>
+                <th>Name</th>
+                <th>Code</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let instrument of instruments">
+                <td class="hidden"></td>
+                <td>{{instrument.name}}</td>
+                <td>{{instrument.code}}</td>
+                <td><button class="btn btn-success" (click)="delete(instrument)">Delete</button>
+                    <button class="btn btn-success" (click)="edit(instrument)" style="margin-left: 20px;">Edit</button></td>
+            </tr>
+        </tbody>
+    </table>
 </div>
