@@ -24,4 +24,8 @@ export class InstrumentEditComponent implements OnInit {
         } );
     }
 
+    onSubmit() {
+        this.router.navigate( ['instrument-list'] );
+    }
+
 }

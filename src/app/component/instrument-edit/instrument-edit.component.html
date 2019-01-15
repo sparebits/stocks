@@ -1,33 +1,16 @@
 <div class="col-md-6 instrument-container">
 
-  <h2 class="text-center">Edit User</h2>
+  <h2 class="text-center">Edit Instrument</h2>
   <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
-    <div class="hidden">
-      <input type="text" formControlName="id" placeholder="id" name="id" class="form-control" id="id">
-    </div>
+
     <div class="form-group">
-      <label for="username">User Name:</label>
-      <input type="text" formControlName="username" placeholder="username" name="username" class="form-control" id="username" readonly="true">
+      <label for="code">Instrument Code:</label>
+      <input type="text" formControlName="code" placeholder="code" name="code" class="form-control" id="code">
     </div>
 
     <div class="form-group">
-      <label for="firstName">First Name:</label>
-      <input formControlName="firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName">
-    </div>
-
-    <div class="form-group">
-      <label for="lastName">Last Name:</label>
-      <input formControlName="lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName">
-    </div>
-
-    <div class="form-group">
-      <label for="age">Age:</label>
-      <input type="number" formControlName="age" placeholder="age" name="age" class="form-control" id="age">
-    </div>
-
-    <div class="form-group">
-      <label for="salary">Salary:</label>
-      <input type="number" formControlName="salary" placeholder="salary" name="salary" class="form-control" id="salary">
+      <label for="name">Instrument Name:</label>
+      <input formControlName="name" placeholder="Instrument Name" name="name" class="form-control" id="name">
     </div>
 
     <button class="btn btn-success">Update</button>
