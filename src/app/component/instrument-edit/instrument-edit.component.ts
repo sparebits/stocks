@@ -22,9 +22,16 @@ export class InstrumentEditComponent implements OnInit {
             code: [''],
             name: ['', Validators.required]
         } );
+        let code = window.localStorage.getItem( "editInstrumentCode" );
+        let instrument = this.instrumentService.getInstrumentByCode( code );
+        this.editForm.setValue( instrument );
     }
 
     onSubmit() {
+        this.router.navigate( ['instrument-list'] );
+    }
+
+    onCancel() {
         this.router.navigate( ['instrument-list'] );
     }
 
